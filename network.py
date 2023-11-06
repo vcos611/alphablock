@@ -14,7 +14,7 @@ class graph:
 
     def assign_random_weights(self, network_delay_factor=0.5, seed=None):            
         """
-        randomly generated following the log-normaldistribution with mean of 0 and variance of 𝛿^2, in which 𝛿 is the network delay factor
+        randomly generated following the log-normal distribution with mean of 0 and variance of 𝛿^2, in which 𝛿 is the network delay factor
         """
         if seed is not None:
             np.random.seed(seed)
@@ -59,5 +59,6 @@ class graph:
         plt.show()
 
 if __name__ == "__main__":
+    np.random.seed(42)  # Fix the random seed
     g = graph(5)
     g.draw()
